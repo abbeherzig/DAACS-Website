@@ -2,7 +2,12 @@
 
 For questions contact Jason Bryer, Ph.D. at [jbryer@excelsior.edu](mailto:jbryer@excelsior.edu).
 
-* [DAACS.net Website](http://daacs.net)
+Folders in the repository:
+
+* `assessments` - This contains the source files for building the DAACS assessments and feedback. See the [readme](https://github.com/DAACS/DAACS-Website/blob/master/assessments/README.md) file for more information.
+* `shiny` - These are shiny apps deployed at shiny.daacs.net. Research related Shiny apps are located in the [DAACS-Research](https://github.com/DAACS/DAACS-Research) repository.
+* `docs` - Source for the daacs.net website.
+
 
 
 ________________________________________________________________________________
