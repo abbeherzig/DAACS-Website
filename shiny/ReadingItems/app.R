@@ -21,14 +21,15 @@ domains <- c('Ideas' = 'ID',
 			 'Purpose' = 'PU',
 			 'Structure' = 'ST')
 
+passages <- character()
+items <- data.frame()
+
 readData <- function() {
-	#items <- read.xls('repo/assessments/reading/ReadingItems.xlsx', sheet = 1, stringsAsFactors=FALSE)
 	items <- read_excel('repo/assessments/reading/ReadingItems.xlsx', sheet = 1)
 	
 	items <- as.data.frame(items)
 	items$ID <- paste0(items$Year, '-', items$Month, ' #', items$ItemNum)
 	
-	passages <- character()
 	files <- list.files(passages.dir, pattern = "*.txt")
 	for(i in files) {
 		tmp <- scan(paste0(passages.dir, i),
@@ -36,6 +37,9 @@ readData <- function() {
 		passages <- c(passages, paste0(tmp, collapse = '\n'))
 	}
 	names(passages) <- files
+	
+	passages <<- passages
+	items <<- items
 }
 
 readData()
