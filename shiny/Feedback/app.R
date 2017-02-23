@@ -20,7 +20,7 @@ if(dir.exists(path)) {
 config(repo, user.name = 'jbryer', user.email = 'jason@bryer.org')
 
 srl.items <- read.xls('repo/assessments/srl/SRL-Items.xlsx', stringsAsFactors=FALSE, verbose = FALSE)
-srl.items <- items[items$PrimaryFactor != '' & items$PrimaryFactor != 'Grit',]
+srl.items <- srl.items[srl.items$PrimaryFactor != '' & srl.items$PrimaryFactor != 'Grit',]
 
 source('repo/assessments/parseMarkdown.R')
 
